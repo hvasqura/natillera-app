@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="add"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Actualizar registro de ahorros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form action ="">
+  <div class="content-form">
+    <ion-grid >
+      <ion-row>
+        <ion-col  size="4">Codigo</ion-col>
+        <ion-col size="4"><ion-input placeholder="Custom input" class="custom"></ion-input></ion-col>
+      </ion-row>
+      <ion-row>
+        <label for="mes">
+          <span>Mes:      </span>
+          <input type="month" id="mes"  name="mes" placeholder="Mes">
+      
+        </label>
+      </ion-row>
+      <ion-row>
+      
+      <label for="fecha">
+        <span>Fecha:   </span>
+        <input type="date" id="fecha" name="fecha" placeholder="Tu Apellido">
+    
+      </label>
+      
+     
+      </ion-row>
+  
+      <ion-row>
+        <ion-col size="4">Socio</ion-col>
+        <ion-col size="4"><ion-input placeholder="Custom input" class="custom"></ion-input></ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col size="4">Valor</ion-col>
+        <ion-col size="4"><ion-input placeholder="Custom input" class="custom"></ion-input></ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-button [routerLink]="['/ahorro']" size="4" >Atras</ion-button>
+    <input type="submit">
+  </div>
+</form>
+</ion-content>

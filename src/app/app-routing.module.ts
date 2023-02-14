@@ -4,12 +4,30 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'inicio',
     pathMatch: 'full'
   },
+  
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    path: 'inicio',
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'informacion-socio',
+    loadChildren: () => import('./informacion-socio/informacion-socio.module').then( m => m.InformacionSocioPageModule)
+  },
+  {
+    path: 'ahorro',
+    loadChildren: () => import('./ahorro/ahorro.module').then( m => m.AhorroPageModule)
+  },
+  {
+    path: 'actualizar-registro-ahorros',
+    loadChildren: () => import('./actualizar-registro-ahorros/actualizar-registro-ahorros.module').then( m => m.ActualizarRegistroAhorrosPageModule)
+  },
+ 
+  {
+    path: 'actividades',
+    loadChildren: () => import('./pages/actividades/actividades.module').then( m => m.ActividadesPageModule)
   }
 ];
 
