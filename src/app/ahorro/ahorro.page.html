@@ -11,44 +11,58 @@
    </ion-toolbar>
 
 
-   <ion-item >
-    <ion-label>Mes</ion-label>
-    <ion-label>Fecha</ion-label>
-    <ion-label><h2 class="colortitulo">Socio</h2></ion-label>
-    <ion-label>
-      <h2>Valor</h2>
-      <h2>Bingo</h2>
-      <h2>Algo</h2>
-    </ion-label>
-    <ion-label>Total</ion-label>
-    <ion-icon name="trash-outline"></ion-icon>
-    <ion-icon name="construct-outline"></ion-icon>
-  </ion-item>
+ 
 </ion-header>
 
 <ion-content>
+  <div id="container">
+    
+      <ion-list>
+        
+    
+        
+          
+          <ion-card *ngFor="let ahorro of searchedAhorro">
+
+            <ion-card-header>
+              <ion-label><h1><ion-icon name="calendar-outline"></ion-icon>  {{ahorro.mes}}</h1></ion-label>
+              <ion-label><h1><ion-icon name="person-outline"></ion-icon>  {{ahorro.socio.nombres}} {{ahorro.socio.apellidos}}</h1></ion-label>
+              <ion-label><h1><ion-icon name="cash-outline"></ion-icon>  ${{ahorro.valor}}</h1> </ion-label>
+            </ion-card-header>
+            <ion-card-content>
+            
+          <ion-label>
+             
+            
+            <h2>{{ahorro.fecha}}</h2>
+          </ion-label>
+          
+          <ion-label>
+            
+          </ion-label>
+
+        
+        <ion-button fill="clear" (click)="presentAlert()"><ion-icon name="trash-outline"></ion-icon>
+          </ion-button>
+  
+          <ion-button fill="clear"[routerLink]="['/actualizar-registro-ahorros']" > 
+          <ion-icon name="construct-outline"></ion-icon></ion-button>
+        </ion-card-content>
+        </ion-card>
+        
+        
+        
+    
+      
+       
+      </ion-list>
+    
+
+  </div>
+
+
   
 
-  <ion-list>
-    
-    <ion-item *ngFor="let ahorro of searchedAhorro">
-      <ion-label>{{ahorro.mes}}</ion-label>
-      <ion-label>{{ahorro.fecha}}</ion-label>
-      <ion-label><h2 class="colortitulo">{{ahorro.idSocio}}</h2></ion-label>
-      <ion-label>
-        <h2>{{ahorro.valor}}</h2>
-        <h2>{{getTipo(ahorro.idConcepto)}}</h2>
-        <h2>Algo</h2>
-      </ion-label>
-      <ion-label>Total</ion-label><ion-button fill="clear" (click)="presentAlert()"><ion-icon name="trash-outline"></ion-icon>
-      </ion-button>
-      
-      <ion-button fill="clear"[routerLink]="['/actualizar-registro-ahorros']" > <ion-icon name="construct-outline"></ion-icon></ion-button>
-    </ion-item>
-
-    
-   
-  </ion-list>
 
  
 </ion-content>

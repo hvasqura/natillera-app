@@ -4,18 +4,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { InformacionSocioPageRoutingModule } from './informacion-socio-routing.module';
+import { IngresoActividadesPageRoutingModule } from './ingreso-actividades-routing.module';
 
-import { InformacionSocioPage } from './informacion-socio.page';
+import { IngresoActividadesPage } from './ingreso-actividades.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    InformacionSocioPageRoutingModule,
+    IngresoActividadesPageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [InformacionSocioPage]
+  declarations: [IngresoActividadesPage]
 })
-export class InformacionSocioPageModule {}
+export class IngresoActividadesPageModule {}

@@ -7,45 +7,40 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content> 
+  <ion-list>
+
   <form action ="">
   <div class="content-form">
-    <ion-grid >
-      <ion-row>
-        <ion-col  size="4">Codigo</ion-col>
-        <ion-col size="4"><ion-input placeholder="Custom input" class="custom"></ion-input></ion-col>
-      </ion-row>
-      <ion-row>
-        <label for="mes">
-          <span>Mes:      </span>
-          <input type="month" id="mes"  name="mes" placeholder="Mes">
-      
-        </label>
-      </ion-row>
-      <ion-row>
-      
-      <label for="fecha">
-        <span>Fecha:   </span>
-        <input type="date" id="fecha" name="fecha" placeholder="Tu Apellido">
+    <ion-item>
+      <ion-label>Codigo</ion-label>
+      <ion-input ></ion-input>
+    </ion-item>
     
-      </label>
+    <ion-item>
+          <ion-label>Mes:</ion-label>
+          <input type="month" id="mes"  name="mes" placeholder="Mes">
+      </ion-item>
       
-     
-      </ion-row>
-  
-      <ion-row>
-        <ion-col size="4">Socio</ion-col>
-        <ion-col size="4"><ion-input placeholder="Custom input" class="custom"></ion-input></ion-col>
-      </ion-row>
-  
-      <ion-row>
-        <ion-col size="4">Valor</ion-col>
-        <ion-col size="4"><ion-input placeholder="Custom input" class="custom"></ion-input></ion-col>
-      </ion-row>
-    </ion-grid>
+      <ion-item>  
+        <ion-label>Fecha:</ion-label>
+        <input type="date" id="fecha" name="fecha" placeholder="Tu Apellido">
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Socio</ion-label>
+        <ion-input ></ion-input>
+      </ion-item>
 
-    <ion-button [routerLink]="['/ahorro']" size="4" >Atras</ion-button>
-    <input type="submit">
+      <ion-item>
+        <ion-label>Valor</ion-label>
+        <ion-input ></ion-input>
+      </ion-item>
+    
+    
   </div>
+  <ion-button [routerLink]="['/ahorro']" size="4" >Atras</ion-button>
 </form>
+
+</ion-list>
 </ion-content>

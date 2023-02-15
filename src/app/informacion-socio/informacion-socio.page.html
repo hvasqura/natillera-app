@@ -5,27 +5,76 @@
 </ion-header>
 
 <ion-content>
-<form action ="">
-  <label for="nombre">
-    <span>Nombre: </span>
-    <input type="text" id="nombre" placeholder="Tu nombre" autocomplete="name" required>
+  <div class="contenedor-formulario">
+    <form [formGroup]="informacionForm" (ngSubmit)="onSubmit(informacionForm)">
+      <ion-list>
+        <ion-item>
+          <ion-label>Documento</ion-label>
+          <ion-input formControlName="documento"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Tipo</ion-label>
+          <ion-select interface="popover" placeholder=" ">
+            <ion-select-option value="CC">CC</ion-select-option>
+            <ion-select-option value="CE">CE</ion-select-option>
+            <ion-select-option value="TI">TI</ion-select-option>
+            <ion-select-option value="RC">RC</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Nombre</ion-label>
+          <ion-input formControlName="nombre"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Apellido</ion-label>
+          <ion-input formControlName="apellido"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Email</ion-label>
+          <ion-input formControlName="email" type="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Direccion</ion-label>
+          <ion-input formControlName="direccion"></ion-input>
+        </ion-item>
 
 
+        <ion-item>
+          <ion-label>Celular</ion-label>
+          <ion-input formControlName="celular" type="number"></ion-input>
+        </ion-item>
+      </ion-list>
+
+
+      <ion-button [disabled]="!informacionForm.valid" shape="round" type="submit">Enviar</ion-button>
+
+
+      <!-- <label for="nombre">
+        <span>Nombre: </span>
+        <input type="text" id="nombre" placeholder="Tu nombre" autocomplete="name" required>
     
-  </label>
-  <label for="apellido">
-    <span>Apellido: </span>
-    <input type="text" id="apellido"  placeholder="Tu Apellido" autocomplete="lastname" required>
+    
+    
+      </label>
+      <label for="apellido">
+        <span>Apellido: </span>
+        <input type="text" id="apellido"  placeholder="Tu Apellido" autocomplete="lastname" required>
+    
+      </label>
+    
+    
+    <label for="correoElectronico">
+      <span>Correo Electronico: </span>
+      <input type="email" id="correoElectronico"  placeholder="Tu correo@" autocomplete="email" required>
+    
+    </label> -->
 
-  </label>
+    </form>
+  </div>
 
-
-<label for="correoElectronico">
-  <span>Correo Electronico: </span>
-  <input type="email" id="correoElectronico"  placeholder="Tu correo@" autocomplete="email" required>
-
-</label>
-  <input type="submit">
-
-</form>
 </ion-content>

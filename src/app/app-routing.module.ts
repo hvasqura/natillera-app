@@ -28,6 +28,10 @@ const routes: Routes = [
   {
     path: 'actividades',
     loadChildren: () => import('./pages/actividades/actividades.module').then( m => m.ActividadesPageModule)
+  },
+  {
+    path: 'ingreso-actividades',
+    loadChildren: () => import('./pages/ingreso-actividades/ingreso-actividades.module').then( m => m.IngresoActividadesPageModule)
   }
 ];
 
