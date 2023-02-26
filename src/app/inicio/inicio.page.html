@@ -5,11 +5,48 @@
 </ion-header>
 
 <ion-content>
-  <div id="container">
 
-  <ion-card>
-    <h2>Valida tu ahorro</h2>
-    <ion-button [routerLink]="['/ahorro']" >Mi ahorro</ion-button>
-</ion-card>
-</div>
+  <div id="container">
+    <ion-grid>
+      <ion-row>
+        
+          <ion-card class="card-inicio">
+            <ion-card-title> Crea una natillera</ion-card-title>
+            <ion-card-content [routerLink]="['/crea-natillera']">
+              <img src="assets/icon/pig-money.svg" class= "imagencard">
+              <ion-card-subtitle>Crea un plan donde ahorras determinada cantidad de dinero fija o variable
+                mensual.</ion-card-subtitle>
+            </ion-card-content>
+          </ion-card>
+        
+
+        
+          <ion-card class="card-inicio">
+            <ion-card-title> Crea tus socios</ion-card-title>
+            <ion-card-content [routerLink]="['/ingreso-socios']">
+              <img src="assets/icon/socios.svg" class= "imagencard">
+              <ion-card-subtitle>Ingresa cada socio que hace parte de la natillera.</ion-card-subtitle>
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card class="card-inicio">
+            <ion-card-title> Crea tus Actividades</ion-card-title>
+            <ion-card-content [routerLink]="['/ingreso-actividades']">
+              <img src="assets/files/actividades.jpeg" class= "imagencard">
+              <ion-card-subtitle>Crea actividades para generar un valor adicional del ahorro</ion-card-subtitle>
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card class="card-inicio">
+            <ion-card-title> Ingresa ahorros</ion-card-title>
+            <ion-card-content [routerLink]="['/ingreso-ahorros']">
+              <img src="assets/icon/ingresoDinero.svg" class= "imagencard">
+              <ion-card-subtitle>Ingresa el valor de dinero que aporta cada socio .</ion-card-subtitle>
+            </ion-card-content>
+          </ion-card>
+      
+    </ion-row>
+
+    </ion-grid>
+  </div>
 </ion-content>

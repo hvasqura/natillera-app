@@ -18,9 +18,9 @@ export class IngresoActividadesPage implements OnInit {
 
   ngOnInit() {
     this.ingresoForm.setValue(
-      {'codigo': '1123',
-      'tipo': 'cc',
-      'fecha': '10/02/2023',
+      {'codigo': '1',
+      'tipo': '',
+      'fecha': '',
       })
   }
   onSubmit(formulario: FormGroup) {

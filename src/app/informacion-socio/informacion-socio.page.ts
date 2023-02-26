@@ -1,3 +1,5 @@
+import { Socio } from './../model/socio/socio';
+import { SocioService } from './../services/socio.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -18,25 +20,29 @@ export class InformacionSocioPage implements OnInit {
       apellido: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
       celular: new FormControl('', [Validators.required]),
-      direccion: new FormControl('', [Validators.required])
+      direccion: new FormControl('', []),
+      password: new FormControl('', [Validators.required, Validators.minLength(8)])
     });
-   }
+  }
 
   ngOnInit() {
     this.informacionForm.setValue(
-      {'documento': '1123',
-      'tipo': 'cc',
-      'nombre': 'alejandro',
-      'apellido': 'marin',
-      'email': 'alejandro@gmail.com',
-      'celular': '123','direccion': 'clle',})
+      {
+        'documento': '1123',
+        'tipo': 'cc',
+        'nombre': 'alejandro',
+        'apellido': 'marin',
+        'email': 'alejandro@gmail.com',
+        'celular': '123', 'direccion': 'clle',
+        'password': '12345678',
+      })
   }
 
   onSubmit(formulario: FormGroup) {
-    if(formulario.valid){
+    if (formulario.valid) {
       console.log(formulario.value);
     }
-    
+
   }
 
 }

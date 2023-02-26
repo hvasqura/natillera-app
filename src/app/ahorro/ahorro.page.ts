@@ -27,7 +27,7 @@ export class AhorroPage implements OnInit {
     const socioReq = {
       "data": [
           {
-              "idSocio": 1,
+              "idSocio":1041325808,
               "requestPagination": {
                   "pageNumber": 0,
                   "pageSize": 10

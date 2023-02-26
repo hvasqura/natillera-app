@@ -32,6 +32,18 @@ const routes: Routes = [
   {
     path: 'ingreso-actividades',
     loadChildren: () => import('./pages/ingreso-actividades/ingreso-actividades.module').then( m => m.IngresoActividadesPageModule)
+  },
+  {
+    path: 'ingreso-socios',
+    loadChildren: () => import('./pages/ingreso-socios/ingreso-socios.module').then( m => m.IngresoSociosPageModule)
+  },
+  {
+    path: 'crea-natillera',
+    loadChildren: () => import('./pages/crea-natillera/crea-natillera.module').then( m => m.CreaNatilleraPageModule)
+  },
+  {
+    path: 'ingreso-ahorros',
+    loadChildren: () => import('./pages/ingreso-ahorros/ingreso-ahorros.module').then( m => m.IngresoAhorrosPageModule)
   }
 ];
 
