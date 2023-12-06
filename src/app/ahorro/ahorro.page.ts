@@ -27,7 +27,7 @@ export class AhorroPage implements OnInit {
     const socioReq = {
       "data": [
           {
-              "idSocio":1041325808,
+              "idSocio":1,
               "requestPagination": {
                   "pageNumber": 0,
                   "pageSize": 10
@@ -81,7 +81,8 @@ searchedAh(event:any){
   
   if(text && text.trim() != ''){
     this.searchedAhorro = this.ahorros.filter((ahorro:any)=>{
-      return (ahorro.mes.toLowerCase().indexOf(text.toLowerCase())> -1);
+      return (ahorro.mes.toLowerCase().indexOf(text.toLowerCase())> -1) || 
+      (ahorro.socio.nombres.toLowerCase().indexOf(text.toLowerCase())> -1);
     });
   } else {
     this.searchedAhorro = Object.create(this.ahorros);

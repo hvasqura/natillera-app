@@ -1,3 +1,5 @@
+import { CicloService } from './../../services/ciclo.service';
+import { Ciclo } from './../../model/ciclo/ciclo';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -9,24 +11,23 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class CreaNatilleraPage implements OnInit {
   public crearNatillera: FormGroup;
 
-  constructor() { 
+  constructor(private cicloService:CicloService) { 
     this.crearNatillera = new FormGroup({
-      codigo: new FormControl('', ),
       nombre: new FormControl('', [Validators.required]),
-      
     });
   }
 
   ngOnInit() {
-    this.crearNatillera.setValue(
-      {'codigo': '',
-      'nombre': '',
-      })
   }
 
   onSubmit(formulario: FormGroup) {
     if(formulario.valid){
-      console.log(formulario.value);
+      const nuevoCiclo: Ciclo = {
+        nombre: formulario.value.nombre
+      }
+      this.cicloService.crear(nuevoCiclo).subscribe(res =>{
+        console.log(res)
+      })
     }
   }
 

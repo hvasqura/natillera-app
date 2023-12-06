@@ -44,7 +44,11 @@ const routes: Routes = [
   {
     path: 'ingreso-ahorros',
     loadChildren: () => import('./pages/ingreso-ahorros/ingreso-ahorros.module').then( m => m.IngresoAhorrosPageModule)
+  },  {
+    path: 'administrador-natillera',
+    loadChildren: () => import('./pages/administrador-natillera/administrador-natillera.module').then( m => m.AdministradorNatilleraPageModule)
   }
+
 ];
 
 @NgModule({

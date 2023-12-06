@@ -1,7 +1,8 @@
 import { Error } from './error';
+import { Paginacion } from './paginacion';
 export interface Response<T> {
-    //meta: string;
+    paginacion: Paginacion;
     data: Array<T>;
-    //message: string;
+    esExitoso: boolean;
     errors?: Error;
 }

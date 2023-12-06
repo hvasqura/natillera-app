@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>crea-natillera</ion-title>
+    <ion-title>Crea una natillera</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,11 +9,7 @@
     <form [formGroup]="crearNatillera" (ngSubmit)="onSubmit(crearNatillera)">
       <ion-list>
         <ion-item>
-          <ion-label>Codigo (*) :</ion-label>
-          <ion-input formControlName="codigo"></ion-input>
-        </ion-item>
-
-        <ion-item>
+          
           <ion-label>Nombre de la natillera : </ion-label>
           <ion-input formControlName="nombre"></ion-input>
         </ion-item>

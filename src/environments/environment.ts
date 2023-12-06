@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: "http://192.168.1.100:8070/api"
+  url: "https://natillera.alejandrom.net/api"
 };
 
 /*
